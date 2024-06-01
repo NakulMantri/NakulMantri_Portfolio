@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Education = () => {
   return (
-    <div className='border-b border-neutral-900 pb-20'>
+    <div id="education" className='border-b p-14 border-neutral-900 pb-24'>
       <motion.h2 
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}

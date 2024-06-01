@@ -4,7 +4,7 @@ import{motion} from "framer-motion";
 
 const About = () => {
   return (
-    <div className="border-b border-neutral-900 pb-4 px-4 md:px-8 lg:px-16">
+    <div className="border-b border-neutral-900 p-4 px-4 md:px-8 lg:px-16 pb-24" id="about">
       <h2 className="my-20 text-center text-4xl">
         About
         <span className="text-neutral-500"> Me</span>
@@ -19,7 +19,7 @@ const About = () => {
         
         className="flex justify-center md:justify-end lg:justify-center relative">
           <img 
-            className="rounded-2xl w-3/4 sm:w-1/2 md:w-full max-w-xs md:max-w-[400px] md:h-auto lg:max-h-[500px] object-cover brightness-75 md:ml-23"
+            className="rounded-2xl w-3/4 sm:w-1/2 md:w-full max-w-xs md:max-w-[400px] md:h-auto lg:max-h-[400px] object-cover brightness-75 md:ml-23"
             src={aboutImg}
             alt="about"
           />
