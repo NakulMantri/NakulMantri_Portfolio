@@ -4,56 +4,45 @@ import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
-    <div  className="border-b border-neutral-900 p-14 pb-24" id="projects" >
-      <motion.h2 
-      
-      whileInView={{ opacity: 1, y: 0 }}
+    <div className="border-b border-neutral-900 p-14 pb-24" id="projects">
+      <motion.h2
+        whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
-      
-      className="my-20 text-center text-4xl">Projects</motion.h2>
+        className="my-20 text-center text-4xl"
+      >
+        Projects
+      </motion.h2>
 
       <div className="grid gap-8">
         {PROJECTS.map((project, index) => (
           <motion.div
-          whileInView={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            
             key={index}
-            className={`flex flex-col md:flex-row items-center w-full max-w-4xl mx-auto`}
-          
+            className="flex flex-col md:flex-row items-center w-full max-w-4xl mx-auto"
           >
             <motion.div
-            
-            whileInView={{opacity:1,x:0}}
-            initial={{opacity:0,x:-100}}
-            transition={{duration:1}}
-            
-             className="md:w-1/2 w-full p-4">
+              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: -100 }}
+              transition={{ duration: 1 }}
+              className="md:w-1/2 w-full p-4"
+            >
               <img
-               
                 src={project.image}
                 alt={project.title}
-               
                 className="object-cover w-full h-full rounded"
               />
             </motion.div>
-            <motion.div 
-            whileInView={{opacity:1,x:0}}
-            initial={{opacity:0,x:100}}
-            transition={{duration:1}}
-            
-            
-            
-            
-            className="md:w-1/2 w-full p-4">
-              <h6
-                className="mb-2 font-semibold"
-              >
-                {project.title}
-              </h6>
+            <motion.div
+              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: 100 }}
+              transition={{ duration: 1 }}
+              className="md:w-1/2 w-full p-4"
+            >
+              <h6 className="mb-2 font-semibold">{project.title}</h6>
               <p className="mb-4 text-neutral-400">{project.description}</p>
               <div className="flex flex-wrap mt-2">
                 {project.technologies.map((tech, index) => (
@@ -65,6 +54,14 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-4 px-4 py-2 rounded bg-purple-600 text-white hover:bg-purple-500 transition-colors duration-200"
+              >
+                View Project
+              </a>
             </motion.div>
           </motion.div>
         ))}

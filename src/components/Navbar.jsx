@@ -35,11 +35,15 @@ const Navbar = () => {
     closeMenu(); // Close the menu after scrolling
   };
 
+  const reloadPage = () => {
+    window.location.reload();
+  };
+
   return (
     <nav ref={navbarRef} className="mb-20 py-6 flex items-center justify-between px-8">
       {/* Logo */}
       <div className='flex items-center'>
-        <img src={logo} className="w-15 h-16" alt='logo' />
+        <img src={logo} className="w-15 h-16 cursor-pointer" alt='logo' onClick={reloadPage} />
       </div>
 
       {/* Hamburger Menu for Small Screens */}
@@ -57,7 +61,7 @@ const Navbar = () => {
 
       {/* Sidebar Menu */}
       {showMenu && (
-        <div className="fixed top-0 right-0 h-full bg-gray-700 w-64 py-4 px-8 transition-all duration-500 delay-1000 z-10">
+        <div className="fixed top-0 right-0 h-full bg-gray-700 w-64 py-4 px-8 transition-all duration-500 z-10">
           <div className="flex flex-col space-y-4">
             <button className="py-2 px-4 text-white hover:bg-gray-800" onClick={() => scrollToSection('home')}>Home</button>
             <button className="py-2 px-4 text-white hover:bg-gray-800" onClick={() => scrollToSection('about')}>About</button>
@@ -66,9 +70,6 @@ const Navbar = () => {
             <button className="py-2 px-4 text-white hover:bg-gray-800" onClick={() => scrollToSection('projects')}>Projects</button>
             <button className="py-2 px-4 text-white hover:bg-gray-800" onClick={() => scrollToSection('contact')}>Get in Touch</button>
           </div>
-
-          {/* Social Icons */}
-       
         </div>
       )}
 

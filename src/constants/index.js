@@ -12,6 +12,7 @@ export const PROJECTS = [
   {
     title: "Travelago",
     image: project1,
+    link:"https://github.com/NakulMantri/TRAVELAGO-MERN.git",
     description:
       "A fully functional vacatio home renting website with features like Add Place,Add Booking and user authentication.",
     technologies: ["HTML", "CSS", "React.js", "Node.js","Express.js","MongoDB"],
@@ -19,6 +20,7 @@ export const PROJECTS = [
   {
     title: "Weatherify",
     image: project2,
+    link:"https://github.com/NakulMantri/Weatherify.git",
     description:
       "An effective medium for weather monitoring and management. Our system provides users with real-time weather updates and detailed forecasts, allowing them to plan their activities accordingly.",
     technologies: ["HTML", "CSS", "React.js", "django","ARIMA"],

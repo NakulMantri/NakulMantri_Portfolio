@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -6,13 +6,18 @@ import Technologies from './components/Technologies';
 import Education from './components/Education';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import Loading from './components/Loading';
+import { useGsapAnimations } from './components/useGsapAnimations';
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
+
   const aboutRef = useRef(null);
   const technologiesRef = useRef(null);
   const educationRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
+  const heroRef = useRef(null);
 
   const scrollToRef = (ref) => {
     if (ref.current) {
@@ -22,6 +27,18 @@ const App = () => {
       });
     }
   };
+
+  useEffect(() => {
+    // Simulate loading
+    const timer = setTimeout(() => setLoading(false, 2000));
+    return () => clearTimeout(timer);
+  }, []);
+
+  useGsapAnimations([heroRef, aboutRef, technologiesRef, educationRef, projectsRef, contactRef]);
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <div className="overflow-x-hidden text-neutral-300 antialiased selection:bg-cyan-300 selection:text-cyan-900">
@@ -34,7 +51,7 @@ const App = () => {
         scrollToProjects={() => scrollToRef(projectsRef)}
         scrollToContact={() => scrollToRef(contactRef)}
       />
-      <Hero />
+      <Hero ref={heroRef} />
       <About ref={aboutRef} />
       <Technologies ref={technologiesRef} />
       <Education ref={educationRef} />
