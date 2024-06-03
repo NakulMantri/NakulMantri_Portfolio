@@ -23,7 +23,17 @@ const Hero = () => {
             animate="visible"
             className="pb-14 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl"
           >
-            Nakul Mantri
+            <span className="hover:text-purple-500 cursor-pointer transition-colors duration-300">N</span>
+            <span className="hover:text-purple-500 cursor-pointer transition-colors duration-300">a</span>
+            <span className="hover:text-purple-500 cursor-pointer transition-colors duration-300">k</span>
+            <span className="hover:text-purple-500 cursor-pointer transition-colors duration-300">u</span>
+            <span className="hover:text-purple-500 cursor-pointer transition-colors duration-300">l</span>{" "}
+            <span className="hover:text-purple-500 cursor-pointer transition-colors duration-300">M</span>
+            <span className="hover:text-purple-500 cursor-pointer transition-colors duration-300">a</span>
+            <span className="hover:text-purple-500 cursor-pointer transition-colors duration-300">n</span>
+            <span className="hover:text-purple-500 cursor-pointer transition-colors duration-300">t</span>
+            <span className="hover:text-purple-500 cursor-pointer transition-colors duration-300">r</span>
+            <span className="hover:text-purple-500 cursor-pointer transition-colors duration-300">i</span>
           </motion.h1>
           <motion.span
             variants={container(0.5)}
@@ -49,7 +59,7 @@ const Hero = () => {
             initial="hidden"
             animate="visible"
           >
-          View Resume
+            View Resume
           </motion.a>
         </div>
         <div className="flex justify-center">
