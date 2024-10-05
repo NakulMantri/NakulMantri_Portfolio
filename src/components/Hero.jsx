@@ -52,7 +52,7 @@ const Hero = () => {
             {HERO_CONTENT}
           </motion.p>
           <motion.a
-            href="https://drive.google.com/file/d/1_U1ba7PrvyJbECXrO7J8AigAXkb6Y17z/view?usp=drive_link" // Replace with the actual path to your resume
+            href="https://drive.google.com/drive/folders/1XjSFTZz_5zAR5foztmUFFVmwEQ-W7fzb?usp=drive_link" // Replace with the actual path to your resume
             target="_blank"
             className="mt-4 inline-block bg-purple-500 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-purple-700 transition-colors duration-300"
             variants={container(1.5)}
